@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fi.jyu.mit.fxgui.ListChooser?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="493.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxOirepaivakirja.OirepaivakirjaGUIController">
+   <center>
+      <BorderPane BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane prefHeight="44.0" prefWidth="586.0" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <children>
+                  <Label layoutX="47.0" layoutY="28.0" text="Pvm" />
+                  <Label layoutX="177.0" layoutY="28.0" prefHeight="17.0" prefWidth="177.0" text="Oireet / Lääkkeet / Lisätitietoja" />
+                  <Label layoutX="108.0" layoutY="28.0" prefHeight="17.0" prefWidth="20.0" text="Klo" />
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <ListChooser fx:id="chooserKirjaukset" prefHeight="367.0" prefWidth="681.0" rivit="1      1.1.2020     20:15      päänsärky, mahakipu        Burana 500 mg     ohjelmointi stressasi&#10;2       &#10;3&#10;4&#10;5&#10;6&#10;7&#10;8&#10;9&#10;10" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </center>
+   <top>
+      <MenuBar prefHeight="23.0" prefWidth="586.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Tiedosto">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAvaa" text="Avaa" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleTallenna" text="Tallenna" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleLopeta" text="Lopeta.." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Muokkaa">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleLisaaKirjaus" text="Lisää.." />
+                 
+                   <MenuItem mnemonicParsing="false" onAction="#handleMuokkaaKirjaus" text="Muokkaa.." />
+                  <MenuItem mnemonicParsing="false" onAction="#handlePoista" text="Poista.." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Apua">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleOhje" text="Ohje" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleTietojaIkkuna" text="Tietoja" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="49.0" prefWidth="681.0" BorderPane.alignment="BOTTOM_RIGHT">
+        <items>
+            <Button layoutX="66.0" layoutY="13.0" mnemonicParsing="false" onAction="#handlePoista" text="Poista" textAlignment="CENTER" />
+          <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#handleMuokkaaKirjaus" text="Muokkaa">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+            </Button>
+            <Button cancelButton="true" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleLisaaKirjaus" text="Lisää" />
+            <TextField fx:id="tekstiEtsi" alignment="CENTER_RIGHT" onAction="#handleEtsi" prefHeight="25.0" prefWidth="257.0" promptText="Kirjoita ehto ja paina Enter." />
+            <Label text="Hakuehto" />
+        </items>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </ToolBar>
+   </bottom>
+</BorderPane>
