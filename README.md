@@ -1,7 +1,8 @@
-# pohja
+## Oirepäiväkirja
+# Harjoitustyö Javalla ja Scenebuilderilla
 
-Pohja kevään 2020 harjoitustöiden GIT-repoille
+Kirjataan oireita tietylle päivämäärälle ja kellonajalle. 
+Samaan kirjaukseen voi lisätä kolme oiretta ja kaksi lääkettä sekä lisätietoja.
+Oireet ja lääkkeet lisätään itse listaan, jota ohjelma käyttää valikoissaan.
+Hakutoiminto tekstijonojen perusteella.
 
-Lue käyttöohjeet TIMistä: <https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/git/ohj2git#fork>
-
-"# Oirepaivakirja" 
