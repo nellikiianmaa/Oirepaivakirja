@@ -10,6 +10,6 @@ Samaan kirjaukseen voi lisätä
 lisätietoja
 ```
 
-Oireet ja lääkkeet lisätään itse listaan, jota ohjelma käyttää valikoissaan.
+Oireet ja lääkkeet lisätään itse listoihin, jota ohjelma käyttää valikoissaan.
 Hakutoiminto tekstijonojen perusteella.
 
